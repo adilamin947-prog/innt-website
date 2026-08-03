@@ -350,26 +350,26 @@ nav.main-nav a.active::after {
   display: block;
 }
 
-/* CTA band with background photo */
-.cta-band.cta-photo {
+/* Reusable background-photo treatment for any section wrapper */
+.cta-photo {
   position: relative;
   overflow: hidden;
   background: var(--ink);
 }
-.cta-band.cta-photo .cta-bg {
+.cta-photo .cta-bg {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center 35%;
   z-index: 0;
 }
-.cta-band.cta-photo .cta-overlay {
+.cta-photo .cta-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background: linear-gradient(to bottom, rgba(10,20,32,0.82), rgba(10,20,32,0.92));
 }
-.cta-band.cta-photo .container {
+.cta-photo .container {
   position: relative;
   z-index: 2;
 }
