@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INNT — Hero Section Options (Demo for Approval)</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .demo-label {
+    background: var(--panel);
+    border-bottom: 1px solid var(--line);
+    padding: 14px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .demo-label .tag-badge {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .demo-label .note {
+    font-size: 13px;
+    color: var(--mute);
+  }
+  .demo-divider {
+    text-align: center;
+    padding: 10px 0;
+    background: var(--ink);
+    color: var(--mute);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* Option B — slideshow hero */
+  .hero-photo {
+    position: relative;
+    padding: 120px 0 90px;
+    border-bottom: 1px solid var(--line);
+    overflow: hidden;
+  }
+  .hero-slides {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .hero-slides .slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center 30%;
+    opacity: 0;
+    animation: heroFade 12s infinite;
+  }
+  .hero-slides .slide:nth-child(1) { background-image: url('assets/fleet/executive/executive-hero.png'); animation-delay: 0s; }
+  .hero-slides .slide:nth-child(2) { background-image: url('assets/fleet/saloon/saloon-hero.png'); animation-delay: 4s; }
+  .hero-slides .slide:nth-child(3) { background-image: url('assets/fleet/mpv/mpv-hero.png'); animation-delay: 8s; }
+  @keyframes heroFade {
+    0%   { opacity: 0; }
+    6%   { opacity: 1; }
+    30%  { opacity: 1; }
+    38%  { opacity: 0; }
+    100% { opacity: 0; }
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(to bottom, rgba(10,20,32,0.55) 0%, rgba(10,20,32,0.75) 55%, rgba(10,20,32,0.95) 100%);
+  }
+  .hero-photo .hero-grid {
+    position: relative;
+    z-index: 2;
+  }
+  .hero-photo .hero-side {
+    border-left: 1px solid rgba(236,231,221,0.25);
+  }
+</style>
+</head>
+<body>
+
+<div class="demo-label">
+  <span class="tag-badge">INNT — Hero Section Demo</span>
+  <span class="note">For client approval — not linked on live site</span>
+</div>
+
+<div class="demo-divider">Option A — No Background Image (Current Live Version)</div>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Private Hire, Done Properly</span>
+        <h1>Every journey, <em>logged, licensed,</em><br>and looked after.</h1>
+        <p class="lede">INNT pairs the accountability of a registered operator with the polish of a private chauffeur — vetted drivers, tracked vehicles, and a fare you agreed to before you got in.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-gold">Book a Journey</a>
+          <a href="#" class="btn btn-outline">View Services</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <p class="quote">"The car was outside before the app said it would be. No small talk, no wrong turns — just the meeting, on time."</p>
+        <p class="quote-attr">Corporate Account Holder, Canary Wharf</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-divider">Option B — Scrolling Fleet Photos in Background</div>
+
+<section class="hero hero-photo">
+  <div class="hero-slides">
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Private Hire, Done Properly</span>
+        <h1>Every journey, <em>logged, licensed,</em><br>and looked after.</h1>
+        <p class="lede">INNT pairs the accountability of a registered operator with the polish of a private chauffeur — vetted drivers, tracked vehicles, and a fare you agreed to before you got in.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-gold">Book a Journey</a>
+          <a href="#" class="btn btn-outline">View Services</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <p class="quote">"The car was outside before the app said it would be. No small talk, no wrong turns — just the meeting, on time."</p>
+        <p class="quote-attr">Corporate Account Holder, Canary Wharf</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-divider">End of Demo</div>
+
+</body>
+</html>
