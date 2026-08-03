@@ -439,6 +439,15 @@ section { padding: 96px 0; }
   margin-bottom: 18px;
   display: block;
 }
+.card-photo {
+  width: calc(100% + 60px);
+  margin: -36px -30px 24px -30px;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+  border-radius: 3px 3px 0 0;
+  border-bottom: 1px solid var(--line);
+}
 .card h3 {
   font-size: 20px;
   margin-bottom: 12px;
@@ -627,9 +636,12 @@ footer {
 
 /* Page header (interior pages) */
 .page-header {
+  position: relative;
   padding: 70px 0 60px;
   border-bottom: 1px solid var(--line);
 }
+.page-header.hero-photo { padding: 110px 0 80px; }
+.page-header.hero-photo .container { position: relative; z-index: 2; }
 .page-header h1 {
   font-size: clamp(36px, 4.6vw, 54px);
   margin-top: 18px;
